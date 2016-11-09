@@ -8,7 +8,10 @@ if a<b
 else 
     b=c;
 end
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 %% Uppgift 2
 % Ber?kna pi/4 med 5 decimaler
@@ -24,6 +27,7 @@ while d>tol
     x=xny
 end
 x
+<<<<<<< HEAD
 %% Uppgift 3
 
 n=length(x);
@@ -32,11 +36,19 @@ for i=1:n-1
     L=L+sqrt((x(i+1)-x(i))^2+(y(i+1)-y(i))^2);
 end
 L
+=======
+
+%% Uppgift 3
+f=polylen
+>>>>>>> origin/master
 
 
+<<<<<<< HEAD
 %% Uppgift 4
 %Mata in punkter med ginput s?a att du f?ar ett polygont?ag som du sedan sluter.
 %Du skall inte best?amma antal punkter i f?orv?ag, men det skall vara fler punkter ?an i en triangel.
 %F?argl?agg sedan omr?adet som innesluts med n?agon f?arg. G?a till Help och l?as i hj?alptexten f?or
 %ginput s?a du kan ta reda p?a hur man kan l?asa in koordinater f?or flera punkter, utan att i f?orv?ag
 %beh?ova best?amma hur m?anga
+=======
+>>>>>>> origin/master
