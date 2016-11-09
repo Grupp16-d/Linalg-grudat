@@ -15,22 +15,19 @@ format long
 d=1;
 x=0;
 tol=1e-6;
-i=0;
 while d>tol
     xny=x+(-1)^i/(2*i+1);
-    i=i+1;
     d=abs(xny-x);
+    i=i+1;
     x=xny
 end
 x
 
 %% Uppgift 2 b
 format long
-x=0
-i=0
-for i=0:1000
+x=0;
+for i=0:999
     x=x+(-1)^i/(2*i+1);
-    i=i+1;
 end
 x
 
