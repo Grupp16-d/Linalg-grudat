@@ -25,13 +25,14 @@ end
 x
 
 %% Uppgift 3
-
 n=length(x);
 L=0;
 for i=1:n-1
     L=L+sqrt((x(i+1)-x(i))^2+(y(i+1)-y(i))^2);
 end
 L
+
+
 %% Uppgift 4
 %Mata in punkter med ginput s?a att du f?ar ett polygont?ag som du sedan sluter.
 %Du skall inte best?amma antal punkter i f?orv?ag, men det skall vara fler punkter ?an i en triangel.
