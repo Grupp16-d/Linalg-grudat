@@ -31,8 +31,12 @@ for i=0:999
 end
 x
 
-%% Uppgift 3
-
+%% Uppgift 3 
+x=[1 3 3 1];
+y=[1 3 1 1];
+plot(x,y)
+axis([0 4 0 4]);
+omkrets=polylen(x,y)
 
 
 %% Uppgift 4
