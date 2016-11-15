@@ -15,6 +15,7 @@ format long
 d=1;
 x=0;
 tol=1e-6;
+i=0;
 while d>tol
     xny=x+(-1)^i/(2*i+1);
     d=abs(xny-x);
@@ -40,9 +41,6 @@ omkrets=polylen(x,y)
 
 
 %% Uppgift 4
-%Mata in punkter med ginput s? att du f?r ett polynom som du sedan sluter.
-%Du skall inte best?mma antal punkter i f?rv?g, men det skall vara fler punkter ?n i en triangel.
-%F?rgl?gg sedan omr?det som innesluts med n?gon f?rg. G? till Help och l?s i hj?lptexten f?r
-%ginput s? du kan ta reda p? hur man kan l?sa in koordinater f?r flera punkter, utan att i f?rv?g
-%beh?va best?mma hur m?nga
-
+[x,y]=ginput;
+plot(x,y);
+fill(x,y,'g');
