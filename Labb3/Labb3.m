@@ -93,8 +93,3 @@ n2 = A*(B+C) == A*B + A*C
 n3 = (B+C)*A == B*A + C*A
 
 k = A*B == B*A
-
-
-
-
-
