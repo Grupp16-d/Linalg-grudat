@@ -89,7 +89,7 @@ A=[1 0 0; 0 1 0; 1 0 1];
 B=[1 0 0; -2 1 0; 0 0 1];
 C=[2 1 1; 4 1 0; -2 2 1];
 
-%Testar de ssociativa och distributiva lagarna
+%Testar de associativa och distributiva lagarna
 n1 = A*(B*C) == (A*B)*C
 n2 = A*(B+C) == A*B + A*C
 n3 = (B+C)*A == B*A + C*A
