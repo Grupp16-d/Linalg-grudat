@@ -50,9 +50,11 @@ minA = [v im(:,in) in]
 maxA = [v im(:,in) in]
 
 %% Uppgift 5
-%konstig summa, troligtvis gjort p? fel s?tt
-A=[1^2;2^2;3^2;4^2;5^2;];
-s=sum(A)
+s=0;
+for t=1:5
+    s=s+t^2;
+end
+disp(s)
 
 %% Uppgift 6
 A=[1 5 9; 2 6 10; 3 7 11; 4 8 12];
