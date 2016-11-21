@@ -38,7 +38,7 @@ c=[4 2 8 0 6];
 %Ger antal rader och kolonner
 [mb, nb] = size(b);
 [mc, nc] = size(c);
-%svar: F?r man man f?r v?rdet 1 p? antigen m eller n
+%svar: F?r man f?r v?rdet 1 p? antigen m eller n
 
 %Ger ett min och max v?rde i A samt dess position
 [v, im] = min(A);
