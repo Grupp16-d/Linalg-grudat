@@ -50,8 +50,14 @@ minA = [v im(:,in) in]
 maxA = [v im(:,in) in]
 
 %% Uppgift 5
-t=1:5;
-s=sum(power(t, 2))
+t=1:5
+S
+
+%s=0;
+%for t=1:5
+%    s=s+t^2;
+%end
+%disp(s)
 
 %% Uppgift 6
 A=[1 5 9; 2 6 10; 3 7 11; 4 8 12];
