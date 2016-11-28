@@ -69,10 +69,9 @@ surf(X1,X2,l3(X1,X2),'facecolor','c')
 xlabel('x_1'), ylabel('x_2'), zlabel('x_3')
 axis([-1 1 -1 1 -4 7]), axis vis3d, grid on, box on
 
-R=rref([A(1:2,:) b(1:2)])
-xt=@(t)[-1.6667+1.6667*t;-3+3*t;t]
-P=[xt(0) xt(2)];
-plot3(P(1,:),P(2,:),P(3,:),'r','linewidth',3), hold off
+R=rref([A b]);
+x=[R(1, 4) R(2, 4) R(3, 4)];
+plot3(x(1),x(2),x(3),'ro','markersize',10,'linewidth',4)
 
 %% 2b) A och b1
 A=[-3 1 2; 3 -2 1; 3 -4 7]; b=[2; 1; 1];
