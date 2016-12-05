@@ -39,3 +39,25 @@ for i=1:size(S,1)
     fill3(H(1,Si),H(2,Si),H(3,Si),'g','facealpha',0.7)
 end
 axis equal, axis tight, axis off, hold off, view(20,10)
+
+%% Uppgift 4
+%rita planet
+xmin=-2; xmax=2; ymin=-2; ymax=2;
+a=1; b=-1; c=4; d=1;
+X=[xmin xmax xmax xmin]; Y=[ymin ymin ymax ymax];
+Z=(d-a*X-b*Y)/c;
+fill3(X,Y,Z,'g','facealpha',0.7)
+xlabel('x'), ylabel('y')
+axis equal, grid on
+
+quiver3(x,y,z,a,b,c,s)
+
+%% Uppgift 5
+%Rita samma plan som uppgift 4
+xmin=-2; xmax=2; ymin=-2; ymax=2;
+a=1; b=-1; c=4; d=1;
+X=[xmin xmax xmax xmin]; Y=[ymin ymin ymax ymax];
+Z=(d-a*X-b*Y)/c;
+fill3(X,Y,Z,'g','facealpha',0.7)
+xlabel('x'), ylabel('y')
+axis equal, grid on

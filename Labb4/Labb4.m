@@ -83,7 +83,3 @@ surf(X1,X2,l4(X1,X2),'facecolor','black')
 
 xlabel('x_1'), ylabel('x_2'), zlabel('x_3')
 axis([-1 1 -1 1 -4 7]), axis vis3d, grid on, box on
-
-R=rref([A b]);
-x=[R(1, 4) R(2, 4) R(3, 4)];
-plot3(x(1),x(2),x(3),'ro','markersize',10,'linewidth',4)
