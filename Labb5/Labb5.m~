@@ -64,25 +64,7 @@ r=[1.5 -1.5 .6];
 plot3(r(1),r(2),r(3),'ro')
 figure(gcf)
 
-%
-proj=dot(pkt2r,normalen)/norm(normalen)^2*normalen;
-myquiv(pkt,proj,1,'black')
-figure(gcf)
 
-%Rita punkten p? planet
-npkt=r-proj;
-plot3(npkt(1),npkt(2),npkt(3),'ro')
-figure(gcf)
-
-%projektion mellan den godtyckliga punkten och punkten p? planet
-myquiv(npkt,proj,1,'black')
-figure(gcf)
-
-%Spegling
-spegling=r-2*proj;
-plot3(spegling(1),spegling(2),spegling(3),'ro')
-myquiv(npkt,-proj,1,'m')
-figure(gcf)
 
 
 %% Uppgift 5
