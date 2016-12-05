@@ -27,12 +27,19 @@ l3=@(x1)(b2(2)-A(2,1)*x1)/A(2,2);
 
 x1=linspace(0,5,5);
 
-plot(x1,l1(x1),'r','linewidth',5), hold on
+plot(x1,l1(x1),'r','linewidth',12), hold on
 plot(x1,l2(x1),'g','linewidth',2)
-plot(x1,l3(x1),'b','linewidth',2)
+plot(x1,l3(x1),'b','linewidth',7)
 
 xlabel('x_1'), ylabel('x_2')
 axis equal, axis([0 3 0 3])
+
+R1=rref([A b1]);
+R2=rref([A b2]);
+
+xt=@(t)[t;(R2(1, 3)-t)/R2(1, 2)];
+P=[xt(0) xt(3)];
+plot(P(1,:),P(2,:),'c','linewidth',2), hold off
 
 %% Uppgift 2
 %% 2a)
@@ -73,7 +80,6 @@ surf(X1,X2,l1(X1,X2),'facecolor','b'), hold on
 surf(X1,X2,l2(X1,X2),'facecolor','g')
 surf(X1,X2,l3(X1,X2),'facecolor','c')
 surf(X1,X2,l4(X1,X2),'facecolor','black')
-
 
 xlabel('x_1'), ylabel('x_2'), zlabel('x_3')
 axis([-1 1 -1 1 -4 7]), axis vis3d, grid on, box on
