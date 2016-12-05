@@ -83,3 +83,8 @@ surf(X1,X2,l4(X1,X2),'facecolor','black')
 
 xlabel('x_1'), ylabel('x_2'), zlabel('x_3')
 axis([-1 1 -1 1 -4 7]), axis vis3d, grid on, box on
+
+R=rref([A(1:2,:) b1(1:2)])
+xt=@(t)[R(1,4)-R(1,3)*t;R(2,3)-R(2,4)*t;t];
+P=[xt(0) xt(2)];
+plot3(P(1,:),P(2,:),P(3,:),'r','linewidth',5), hold off
