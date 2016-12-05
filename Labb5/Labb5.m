@@ -41,6 +41,11 @@ end
 axis equal, axis tight, axis off, hold off, view(20,10)
 
 %% Uppgift 4
+%t?mmer alla variabler innan vi k?r
+clear all
+close all
+clc
+
 %rita planet
 xmin=-2; xmax=2; ymin=-2; ymax=2;
 a=1; b=-1; c=4; d=1;
@@ -64,7 +69,11 @@ r=[1.5 -1.5 .6];
 plot3(r(1),r(2),r(3),'ro')
 figure(gcf)
 
-%
+%definerar pkt2r
+pkt2r=r-pkt;
+figure(gcf)
+
+%Vektorrojektionen av denna p? normalvektorn:
 proj=dot(pkt2r,normalen)/norm(normalen)^2*normalen;
 myquiv(pkt,proj,1,'black')
 figure(gcf)
@@ -83,8 +92,6 @@ spegling=r-2*proj;
 plot3(spegling(1),spegling(2),spegling(3),'ro')
 myquiv(npkt,-proj,1,'m')
 figure(gcf)
-
-
 %% Uppgift 5
 %Rita samma plan som uppgift 4
 xmin=-2; xmax=2; ymin=-2; ymax=2;
