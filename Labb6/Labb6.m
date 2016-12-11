@@ -9,6 +9,6 @@ e=norm(A*x-yd)/sqrt(n);
 y=a+b*td;
 plot(td,y, 'linewidth', 3), hold on
 for i=1:size(td)
-     plot(td(i),yd(i))
+     plot(td(i),yd(i), 'ro', 'markersize', 4, 'linewidth', 20)
 end
 %% Uppgift 2
