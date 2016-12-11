@@ -7,7 +7,8 @@ n=length(td);
 e=norm(A*x-yd)/sqrt(n);
 
 y=a+b*td;
-plot(td,y)
+plot(td,y, 'linewidth', 3), hold on
 for i=1:size(td)
-    
+     plot(td(i),yd(i))
+end
 %% Uppgift 2
