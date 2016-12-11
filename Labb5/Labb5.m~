@@ -41,6 +41,11 @@ end
 axis equal, axis tight, axis off, hold off, view(20,10)
 
 %% Uppgift 4
+%t?mmer alla variabler innan vi k?r
+clear all
+close all
+clc
+
 %rita planet
 xmin=-2; xmax=2; ymin=-2; ymax=2;
 a=1; b=-1; c=4; d=1;
@@ -64,15 +69,46 @@ r=[1.5 -1.5 .6];
 plot3(r(1),r(2),r(3),'ro')
 figure(gcf)
 
+%definerar pkt2r
+pkt2r=r-pkt;
+figure(gcf)
 
+%Vektorrojektionen av denna p? normalvektorn:
+proj=dot(pkt2r,normalen)/norm(normalen)^2*normalen;
+myquiv(pkt,proj,1,'black')
+figure(gcf)
 
+%Rita punkten p? planet
+npkt=r-proj;
+plot3(npkt(1),npkt(2),npkt(3),'ro')
+figure(gcf)
 
+%projektion mellan den godtyckliga punkten och punkten p? planet
+myquiv(npkt,proj,1,'black')
+figure(gcf)
+
+%Spegling
+spegling=r-2*proj;
+plot3(spegling(1),spegling(2),spegling(3),'ro')
+myquiv(npkt,-proj,1,'m')
+figure(gcf)
 %% Uppgift 5
+clear all
+close all
+clc
+
 %Rita samma plan som uppgift 4
-xmin=-2; xmax=2; ymin=-2; ymax=2;
+xmin=-10; xmax=10; ymin=-10; ymax=10;
 a=1; b=-1; c=4; d=1;
 X=[xmin xmax xmax xmin]; Y=[ymin ymin ymax ymax];
 Z=(d-a*X-b*Y)/c;
 fill3(X,Y,Z,'g','facealpha',0.7)
 xlabel('x'), ylabel('y')
 axis equal, grid on
+
+%Rita ut normalen f?r planet
+pkt=[0 0 1/4];
+normalen=[a b c];
+quiver3(pkt(1),pkt(2),pkt(3),normalen(1),normalen(2),normalen(3),1/2)
+myquiv=@(x,y,s,str)quiver3(x(1),x(2),x(3),y(1),y(2),y(3),s,str);
+figure(gcf)
