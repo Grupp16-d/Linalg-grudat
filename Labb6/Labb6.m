@@ -1,5 +1,13 @@
-%% Uppgift 1
+%% Upgift 1
+td=[5 6 7 8 9 10]';
+yd=[19.5888 23.4043 25.5754 29.1231 31.9575 35.8116]'; 
+A=[ones(size(td)) td];
+x=A\yd; a=x(1); b=x(2);
+n=length(td);
+e=norm(A*x-yd)/sqrt(n);
 
-%% 1b)
-
+y=a+b*td;
+plot(td,y)
+for i=1:size(td)
+    
 %% Uppgift 2
