@@ -84,7 +84,6 @@ end
 
 hold off
 %% Uppgift 4
-%t?mmer alla variabler innan vi k?r
 clear all
 close all
 clc
