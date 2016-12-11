@@ -29,6 +29,7 @@ hold off
 
 
 %% Uppgift 2
+%Skapar en kub
 H=[0 1 0 1 0 1 0 1; 0 0 1 1 0 0 1 1; 0 0 0 0 1 1 1 1];
 S=[1 2 4 3; 1 2 6 5; 1 3 7 5; 3 4 8 7; 2 4 8 6; 5 6 8 7];
 
@@ -39,6 +40,7 @@ for i=1:size(S,1)
     fill3(H(1,Si),H(2,Si),H(3,Si),'g','facealpha',0.7)
 end
 
+%Roterar kuben
 v=pi/1.5;
 A=[cos(v) -sin(v) 0; sin(v) cos(v) 0; 0 0 1];
 
@@ -51,6 +53,8 @@ for i=1:size(S,1)
 end
 
 pause(1)
+
+%flyttar kuben
 T=[3; 3; 2;];
 F=[];
 
@@ -66,6 +70,7 @@ end
 
 pause(1)
 
+%Roterar igen
 v=pi/10;
 A=[1 0 0; 0 cos(v) -sin(v); 0 sin(v) cos(v)];
 
