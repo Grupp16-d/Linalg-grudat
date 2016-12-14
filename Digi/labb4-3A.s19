@@ -1,0 +1,5 @@
+Inport	EQU	$FC
+Utport	EQU	$FB
+
+State: 	EQU	$40
+

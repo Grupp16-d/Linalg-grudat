@@ -1,0 +1,6 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+File: labb4-3A.fmem
+
+ # ClearAllMemory
+ # ClearAllRegisters

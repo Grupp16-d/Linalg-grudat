@@ -1,0 +1,9 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: labb4-3A.lst
+FC                      1. Inport	EQU	$FC
+FB                      2. Utport	EQU	$FB
+10                      3. DelayC1	EQU	$10		;Dessa konstanter styr hur lång fördröjning Delay1s orsakar.
+01                      4. DelayC2	EQU	$1		;Ändra dem eventuellt i labbet så att fördröjnigen blir rimligt lång.

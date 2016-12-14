@@ -1,0 +1,18 @@
+MOTOR:          EQU     $FB
+         
+		ORG     $20
+
+Start:          LDA     #$90
+                STA     MOTOR
+		LDA     #$A0
+                STA     MOTOR
+                LDA     #$60
+                STA     MOTOR
+                LDA     #$50
+                STA     MOTOR
+                JMP     Start
+
+
+
+                ORG     $70
+Segmentkod:	FCB	$90,$A0,$60,$50

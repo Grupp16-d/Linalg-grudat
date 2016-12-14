@@ -1,0 +1,8 @@
+;
+;	Moment1.sflips
+;
+	ORG	$20
+start:	LDA	$FC
+	STAA	$FB
+	JMP	start
+

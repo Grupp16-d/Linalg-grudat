@@ -1,0 +1,43 @@
+MOTOR:          EQU     $FB
+DIPSWITCH:      EQU     $FC
+
+
+		
+state_index     EQU     $1E
+
+                ORG     $20
+Start:          LDSP    #$10
+                LDX     #state_vector
+                CLRA    
+                STA     state_index
+
+Loop:           LDA     DIPSWITCH
+		JSR     Delay
+	        LDA     state_index
+		LDA     A,X
+                STA     MOTOR
+                JSR     NextState
+                BRA     Loop
+
+Delay:          PSHA
+		PSHC
+
+Delay_1:        DECA
+		BNE     Delay_1
+		PULC
+		PULA
+		RTS
+
+NextState:      PSHA
+                PSHC
+		LDA     state_index
+                INCA
+                ANDA    #$03
+                STA     state_index
+                PULC
+                PULA
+		RTS
+
+
+	        ORG     $70
+state_vector:	FCB	$90,$A0,$60,$50

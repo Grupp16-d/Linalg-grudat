@@ -1,0 +1,4 @@
+Inport	EQU	$FC
+Utport	EQU	$FB
+DelayC1	EQU	$10		;Dessa konstanter styr hur lång fördröjning Delay1s orsakar.
+DelayC2	EQU	$1		;Ändra dem eventuellt i labbet så att fördröjnigen blir rimligt lång.
