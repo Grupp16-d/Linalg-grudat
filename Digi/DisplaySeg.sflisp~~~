@@ -1,24 +1,24 @@
 DIPSWITCH:	EQU	$FC
 SEGMENT7:	EQU	$FB
-SEG_ERROR:      EQU     %01111001
+SEG_ERROR:      	EQU     %01111001
 
 		ORG	$20    
 
 DisplaySegE: 	LDX     #Segmentkod
 
-DisplatSegE_1:  LDA     DIPSWITCH
+DisplatSegE_1:  	LDA     DIPSWITCH
 		CMPA    #10
-                BCS     DisplaySegE_2
-                LDA     #SEG_ERROR
-                BRA     DisplaySegE_3
+		BCS     DisplaySegE_2
+		LDA     #SEG_ERROR
+		BRA     DisplaySegE_3
 
-DisplaySegE_2:  LDA     DIPSWITCH
-                LDA     A,X
+DisplaySegE_2:	LDA	DIPSWITCH
+		LDA	A,X
 
-DisplaySegE_3:  STA     SEGMENT7
+DisplaySegE_3:	STA 	SEGMENT7
 
 
 
-                ORG 	$70
+		ORG 	$70
 Segmentkod:	FCB	$3F,$06,$5B,$4F,$66
          	FCB	$6D,$7D,$07,$7F,$6F

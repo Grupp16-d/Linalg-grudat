@@ -1,0 +1,7 @@
+
+
+
+	ORG	$20
+start: 	LDA 	$FC
+	STA	$FB
+	JMP	start
