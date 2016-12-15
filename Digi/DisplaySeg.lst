@@ -1,0 +1,29 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: DisplaySeg.lst
+FC                      1. DIPSWITCH:	EQU	$FC
+FB                      2. SEGMENT7:	EQU	$FB
+79                      3. SEG_ERROR:      	EQU     %01111001
+                        4. 
+20                      5. 		ORG	$20    
+                        6. 
+20 90 70                7. DisplaySegE: 	LDX     #Segmentkod
+                        8. 
+22 F1 FC                9. DisplatSegE_1:  	LDA     DIPSWITCH
+24 97 0A               10. 		CMPA    #10
+26 28 04               11. 		BCS     DisplaySegE_2
+28 F0 79               12. 		LDA     #SEG_ERROR
+2A 21 03               13. 		BRA     DisplaySegE_3
+                       14. 
+2C F1 FC               15. DisplaySegE_2:	LDA	DIPSWITCH
+2E F4                  16. 		LDA	A,X
+                       17. 
+2F E1 FB               18. DisplaySegE_3:	STA 	SEGMENT7
+                       19. 
+                       20. 
+                       21. 
+70                     22. 		ORG 	$70
+70 3F 06 5B 4F 66      23. Segmentkod:	FCB	$3F,$06,$5B,$4F,$66
+75 6D 7D 07 7F 6F      24.          	FCB	$6D,$7D,$07,$7F,$6F

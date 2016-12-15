@@ -1,9 +1,0 @@
-LED:    		EQU	$FB
-
-		ORG     $20
-RunDiode:	CLRA
-		LDA     #01
-
-RunDiode_1:	STA     LED
-		ROLA
-		JMP     RunDiode_1

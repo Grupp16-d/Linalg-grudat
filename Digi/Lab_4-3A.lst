@@ -1,0 +1,23 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: Lab_4-3A.lst
+FB                      1. MOTOR:          	EQU     $FB
+00                      2.          
+20                      3. 		ORG     $20
+                        4. 
+20 F0 90                5. Start:         	LDA     #$90
+22 E1 FB                6. 		STA     MOTOR
+24 F0 A0                7. 		LDA     #$A0
+26 E1 FB                8. 		STA     MOTOR
+28 F0 60                9. 		LDA     #$60
+2A E1 FB               10. 		STA     MOTOR
+2C F0 50               11. 		LDA     #$50
+2E E1 FB               12. 		STA     MOTOR
+30 33 20               13. 		JMP     Start
+                       14. 
+                       15. 
+                       16. 
+70                     17. 		ORG     $70
+70 90 A0 60 50         18. Segmentkod:	FCB	$90,$A0,$60,$50

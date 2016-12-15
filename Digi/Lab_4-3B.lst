@@ -1,0 +1,48 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: Lab_4-3B.lst
+FB                      1. MOTOR:          EQU     $FB
+FC                      2. DIPSWITCH:      EQU     $FC
+                        3. 
+                        4. 
+00                      5. 		
+1E                      6. state_index     EQU     $1E
+                        7. 
+20                      8.                 ORG     $20
+20 92 10                9. Start:          LDSP    #$10
+22 90 70               10.                 LDX     #state_vector
+24 05                  11.                 CLRA    
+25 E1 1E               12.                 STA     state_index
+                       13. 
+27 F1 FC               14. Loop:           LDA     DIPSWITCH
+29 34 34               15. 		JSR     Delay
+2B F1 1E               16. 	        LDA     state_index
+2D F4                  17. 		LDA     A,X
+2E E1 FB               18.                 STA     MOTOR
+30 34 3C               19.                 JSR     NextState
+32 21 F3               20.                 BRA     Loop
+                       21. 
+34 10                  22. Delay:          PSHA
+35 13                  23. 		PSHC
+                       24. 
+36 08                  25. Delay_1:        DECA
+37 25 FD               26. 		BNE     Delay_1
+39 17                  27. 		PULC
+3A 14                  28. 		PULA
+3B 43                  29. 		RTS
+                       30. 
+3C 10                  31. NextState:      PSHA
+3D 13                  32.                 PSHC
+3E F1 1E               33. 		LDA     state_index
+40 07                  34.                 INCA
+41 99 03               35.                 ANDA    #$03
+43 E1 1E               36.                 STA     state_index
+45 17                  37.                 PULC
+46 14                  38.                 PULA
+47 43                  39. 		RTS
+                       40. 
+                       41. 
+70                     42. 	        ORG     $70
+70 90 A0 60 50         43. state_vector:	FCB	$90,$A0,$60,$50
