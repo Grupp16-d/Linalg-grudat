@@ -25,5 +25,8 @@ FB                      2. SEGMENT7:	EQU	$FB
                        20. 
                        21. 
 70                     22. 		ORG 	$70
-70 3F 06 5B 4F 66      23. Segmentkod:	FCB	$3F,$06,$5B,$4F,$66
-75 6D 7D 07 7F 6F      24.          	FCB	$6D,$7D,$07,$7F,$6F
+70 77 23 5B 6B 2D      23. Segmentkod:	FCB	$77,$23,$5B,$6B,$2D
+75 6C 7C 77 8F 2F      24.          	FCB	$6C,$7C,$77,$8F,$2F
+                       25. 
+FF                     26. 		ORG  	$FF
+FF 20                  27. 		FCB 	$20
